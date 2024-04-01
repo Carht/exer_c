@@ -1,22 +1,39 @@
 #include <stdio.h>
 #include <string.h>
 
-char first_part[20];  // first word, max 19 characters, last \0
-char second_part[20]; // second word
-char concat_strs[45]; // concatenation result
+/*
+Title:
+  Concat some input strings from the stdin.
+
+Author:
+  Carcht carht[at]protonmail[dot]com
+
+License:
+  GPL v3.0
+ */
+
+
+char first_word[100];  // first word, max 100 characters, include  \0
+char second_word[100]; // second word
+char concat_words[200]; // concatenation result
 
 int main() {
   // asignation
-  strcpy(first_part, "Hello,");
-  strcpy(second_part, "World!");
+  printf("Enter a first word: ");
+  fgets(first_word, sizeof(first_word), stdin);
 
-  strcpy(concat_strs, first_part);
+  printf("Enter a second word: ");
+  fgets(second_word, sizeof(second_word), stdin);
 
+  // set the \n to end-of-string, included with fgets from the stdin
+  first_word[strlen(first_word) - 1] = '\0';
+  
   // concatenation
-  strcat(concat_strs, " ");
-  strcat(concat_strs, second_part);
+  strcpy(concat_words, first_word);
+  strcat(concat_words, " ");
+  strcat(concat_words, second_word);
 
-  printf("Concatenated words: %s\n", concat_strs);
+  printf("Concatenated words: %s", concat_words);
 
   return 0;
 }
