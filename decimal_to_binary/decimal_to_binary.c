@@ -18,7 +18,7 @@ Algoritm:
 - repeat the process
 
 Compilation:
-$ gcc -o decimal_to_binary decimal_to_binary.c
+$ make
 
 Usage:
 $ ./decimal_to_binary
