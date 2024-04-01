@@ -34,7 +34,7 @@ License:
  */
 
 void dec_to_bin(int x) {
-  int bin_vec[64];
+  int bin_vec[64]; //vector for binary number
 
   int i = 0;
 
