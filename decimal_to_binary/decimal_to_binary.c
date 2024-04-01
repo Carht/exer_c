@@ -2,6 +2,7 @@
 
 /*
 
+Head:
 Take a decimal from stdin and return the
 binary representation of this number.
 
@@ -15,6 +16,20 @@ Algoritm:
 - If input is even, divide (input / 2), if input is odd
   (input - 1)/2.
 - repeat the process
+
+Compilation:
+$ gcc -o decimal_to_binary decimal_to_binary.c
+
+Usage:
+$ ./decimal_to_binary
+Please input a decimal number and press Return: 11
+1011
+
+Author:
+  Carht carht@protonmail.com
+
+License:
+  GPLv3.0
 
  */
 
